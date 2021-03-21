@@ -24,7 +24,7 @@ public extension BinaryReader {
             let typeRead = withUnsafeBytes(of: Data(data).prefix(size / .byte)) {
                 $0.baseAddress!.assumingMemoryBound(to: T.self).pointee
             }
-            return (typeRead, self.withCursor(offset: cursor + size))
+            return (typeRead, self.withCursor(offset: size))
         } else {
             return nil
         }
