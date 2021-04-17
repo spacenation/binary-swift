@@ -9,6 +9,17 @@ public extension Bit {
     init(_ int: UInt8) {
         self = int == 0 ? .zero : .one
     }
+    
+    init?(_ character: Character) {
+        switch character {
+        case "0":
+            self = .zero
+        case "1":
+            self = .one
+        default:
+            return nil 
+        }
+    }
 }
 
 public extension Bool {
