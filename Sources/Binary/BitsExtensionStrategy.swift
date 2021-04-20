@@ -1,7 +1,8 @@
 import Foundation
 
 public enum BitsExtensionStrategy: Equatable {
-    case signExtended
-    case zeroExtended
-    case zeroBackfill
+    case fixed
+    case signExtended(UInt)
+    case zeroExtended(UInt)
+    case zeroBackfill(UInt)
 }
