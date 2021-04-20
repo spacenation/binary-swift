@@ -2,13 +2,15 @@ import Foundation
 import List
 
 public extension List where Element == Bit {
-    func extend(to length: UInt, with strategy: BitsExtensionStrategy) -> Self {
+    func extend(with strategy: BitsExtensionStrategy) -> Self {
         switch strategy {
-        case .zeroExtended:
+        case .fixed:
+            return self
+        case .zeroExtended(let length):
             return self.zeroExtended(to: length)
-        case .signExtended:
+        case .signExtended(let length):
             return self.signExtended(to: length)
-        case .zeroBackfill:
+        case .zeroBackfill(let length):
             return self.zeroBackfill(to: length)
         }
     }
