@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.4
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -9,7 +9,7 @@ let package = Package(
         .library(name: "Binary", targets: ["Binary"]),
     ],
     dependencies: [
-        .package(name: "List", url: "git@github.com:spacenation/list-swift.git", .upToNextMajor(from: "0.2.1")),
+        .package(name: "List", url: "git@github.com:spacenation/swift-list.git", .upToNextMajor(from: "0.3.3")),
     ],
     targets: [
         .target(name: "Binary", dependencies: ["List"]),

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "List",
+        "repositoryURL": "git@github.com:spacenation/swift-list.git",
+        "state": {
+          "branch": null,
+          "revision": "fb70a00e7a7cd6fa47ab7fd509ab638a1fe81f04",
+          "version": "0.3.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
